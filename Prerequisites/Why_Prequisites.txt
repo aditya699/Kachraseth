@@ -1,0 +1,1 @@
+"This file will serve as a KT folder for new comers who wish to create ai based applications"
