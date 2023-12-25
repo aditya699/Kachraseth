@@ -1,1 +1,4 @@
 "This file will serve as a KT folder for new comers who wish to create ai based applications"
+In case someone wants to study from my notes with lectures link included please follow along-
+
+https://docs.google.com/document/d/1A0zA8qiBcirJT7VUbgXcGZPVaKjmkGI0dx-egVN3Yz0/edit#heading=h.kk1966kbedef
