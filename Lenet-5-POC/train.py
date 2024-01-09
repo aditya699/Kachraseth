@@ -34,7 +34,7 @@ val_loader = DataLoader(val_dataset, batch_size=32, shuffle=False)
 #Define the lenet-5 model
 def lenet(num_classes):
     model=nn.Sequential(
-        nn.Conv2d(3,6,kernel_size=5,stride=1,padding=2),
+        nn.Conv2d(3,6,kernel_size=5,stride=1,padding=0),
         nn.AvgPool2d(kernel_size=2, stride=2),
         nn.Conv2d(6, 16, kernel_size=5, stride=1, padding=0),
         nn.AvgPool2d(kernel_size=2, stride=2),
@@ -75,7 +75,7 @@ criterion = nn.CrossEntropyLoss()
 optimizer = torch.optim.SGD(lenet(num_classes=2).parameters(), lr=0.001)
 
 # Specify the number of training epochs
-num_epochs = 1
+num_epochs = 100
 
 # Training loop
 train(lenet(2), train_loader, criterion, optimizer, num_epochs)
