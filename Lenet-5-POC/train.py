@@ -66,7 +66,8 @@ def train(model,train_loader,criterion,optimizer,num_epochs=1):
             
             # Print training progress
             if batch_idx % 100 == 0:
-                print(f'Epoch [{epoch + 1}/{num_epochs}], Batch [{batch_idx}/{len(train_loader)}], Loss: {loss.item():.4f}')
+                with open('training_log_lenet.txt', 'a') as log_file:
+                 log_file.write(f'Epoch [{epoch + 1}/{num_epochs}], Batch [{batch_idx}/{len(train_loader)}], Loss: {loss.item():.4f}\n')
 
 
         
@@ -81,26 +82,3 @@ num_epochs = 100
 train(lenet(2), train_loader, criterion, optimizer, num_epochs)
 
 
-# def evaluate(model, val_loader, criterion):
-#     model.eval()
-#     val_loss = 0.0
-#     correct = 0
-#     total = 0
-
-#     with torch.no_grad():
-#         for data, target in val_loader:
-#             output = model(data)
-#             loss = criterion(output, target)
-#             val_loss += loss.item()
-
-#             _, predicted = output.max(1)
-#             total += target.size(0)
-#             correct += predicted.eq(target).sum().item()
-
-#     accuracy = correct / total
-#     average_val_loss = val_loss / len(val_loader)
-
-#     print(f'Validation Loss: {average_val_loss:.4f}, Accuracy: {100 * accuracy:.2f}%')
-
-# # Evaluate the model on the validation set
-# evaluate(lenet(2), val_loader, criterion)
