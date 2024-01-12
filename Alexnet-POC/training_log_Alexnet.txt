@@ -1,0 +1,2 @@
+Epoch [1/100], Batch [0/706], Loss: 0.6866
+Epoch [1/100], Batch [100/706], Loss: 0.6911
