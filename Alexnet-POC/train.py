@@ -109,3 +109,4 @@ num_epochs = 100
 
 # Training loop
 train(Alexnet(2), train_loader, criterion, optimizer, num_epochs)
+
