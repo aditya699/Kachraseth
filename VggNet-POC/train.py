@@ -27,10 +27,10 @@ train_dataset=datasets.ImageFolder(root='./Lenet-5-POC/Data/train',transform=tra
 val_dataset=datasets.ImageFolder(root='./Lenet-5-POC/Data/val',transform=transform)
 
 # Create DataLoader for training
-train_loader = DataLoader(train_dataset, batch_size=32, shuffle=True)
+train_loader = DataLoader(train_dataset, batch_size=256, shuffle=True)
 
 # Create DataLoader for validation
-val_loader = DataLoader(val_dataset, batch_size=32, shuffle=False)
+val_loader = DataLoader(val_dataset, batch_size=256, shuffle=False)
 
 #Load the pretrained vgg-16 model
 vgg16_model=models.vgg16(pretrained=True)
