@@ -56,6 +56,9 @@ def train(model, train_loader, criterion, optimizer, num_epochs=5):
         accuracy = total_correct / total_samples * 100
         print(f'Training Accuracy after Epoch {epoch + 1}: {accuracy:.2f}%')
 
+        # Save the trained model after all epochs
+    torch.save(inception_model.state_dict(), 'inception_model_state_dict.pth')
+
 # Specify the number of training epochs
 num_epochs = 5
 
